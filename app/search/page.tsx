@@ -1,6 +1,17 @@
-'use client'
 import MainLayout from "@/components/common/MainLayout";
 import GridPosts from "@/components/common/GridPosts";
+import {Metadata} from "next";
+
+export async function generateMetadata(params: any): Promise<Metadata> {
+
+    return {
+        title: `Searching for ${params?.searchParams?.q} - Fastest Blog website`,
+        description: 'Fastest Blog website',
+        openGraph: {
+            images: '',
+        },
+    }
+}
 
 export default function Search (params: any){
 

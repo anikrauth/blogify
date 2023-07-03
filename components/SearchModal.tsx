@@ -4,6 +4,7 @@ import {useRouter} from "next/navigation";
 export default function SearchModal(props: any) {
     const router = useRouter()
     const {setSearchOpen}= props;
+    const [loading, setLoading] = useState(false);
     const [searchInput, setSearchInput] = useState("");
     const [placeHolder, setPlaceHolder] = useState("Search newsfeed with keywords...");
 
@@ -15,7 +16,10 @@ export default function SearchModal(props: any) {
             setPlaceHolder('Please type something..')
         }
         setSearchOpen(false)
+
     };
+
+    console.log(props)
 
     return (
         <div className="bg-white_color dark:bg-dark_header_color h-screen w-full fixed z-[100] top-0 left-0 flex justify-center items-center ">
