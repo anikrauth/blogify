@@ -5,7 +5,7 @@ import { HiChevronDown } from "react-icons/hi";
 import { IoLogoFacebook, IoLogoTwitter,IoMenu, IoLogoInstagram, IoLogoYoutube, IoSearch } from "react-icons/io5"
 import {useQuery} from "@tanstack/react-query";
 import client from "@/lib/cms/WordPress/ApolloClient";
-import {GET_MENUS, GET_SOCIAL_MEDIAS} from "@/lib/cms/WordPress/Quries";
+import {GET_LOGOS, GET_MENUS, GET_SOCIAL_MEDIAS} from "@/lib/cms/WordPress/Quries";
 import {arrayOutputType} from "zod";
 import SearchModal from "@/components/SearchModal";
 import {useState} from "react";
@@ -51,6 +51,14 @@ export default function Header() {
             ),
     })
 
+    const { data: LogoData, isLoading: LogoDataLoading } = useQuery<any>({
+        queryKey: ['logos'],
+        queryFn: async () =>
+            await client.request(
+                GET_LOGOS
+            ),
+    })
+
     const handleSearchOpen = () => {
         if(searchOpen){
             setSearchOpen(false)
@@ -67,10 +75,12 @@ export default function Header() {
     }
 
 
+    console.log(LogoData?.blogifySettings?.blogify_logo)
+
     return (
         <header className={`flex items-center bg-white dark:bg-dark_header_color shadow-md px-5 md:px-16 py-[10px] w-full`}>
             <div className="logo w-[50%] lg:w-[20%] ">
-               <Link className="w-full flex items-center justify-start" href="/"> <Image src="/Images/logo.png" width="160" height="85" alt="logo" /></Link>
+               <Link className="w-full flex items-center justify-start" href="/"> <Image src={LogoData?.blogifySettings?.blogify_logo ? LogoData?.blogifySettings?.blogify_logo : "/Images/logo.png"} width="160" height="85" alt="logo" /></Link>
             </div>
             <div className="main_menu w-[0px] lg:w-[60%] flex justify-center items-center invisible xl:visible">
                 <ul className="flex items-center">

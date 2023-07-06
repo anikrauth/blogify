@@ -19,7 +19,7 @@ export default function SearchModal(props: any) {
 
     };
 
-    console.log(props)
+
 
     return (
         <div className="bg-white_color dark:bg-dark_header_color h-screen w-full fixed z-[100] top-0 left-0 flex justify-center items-center ">
