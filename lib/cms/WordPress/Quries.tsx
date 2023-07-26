@@ -357,5 +357,18 @@ query Get_Logos {
 }
 `
 
+const GET_PAGES = gql`
+query Get_Pages($id: ID!) {
+  page(id: $id, idType: URI) {
+    title
+    content
+    featuredImage {
+      node{
+        mediaItemUrl
+      }
+    }
+  }
+}
+`
 
-export {GET_LOGOS, GET_SOCIAL_MEDIAS, GET_ADS_CODES, GET_TAG, GET_POST, GET_POSTS_BY_CATEGORY, GET_MENUS, GET_TAGS, GET_CATEGORIES, GET_POSTS, GET_SEARCH_POSTS}
+export {GET_PAGES, GET_LOGOS, GET_SOCIAL_MEDIAS, GET_ADS_CODES, GET_TAG, GET_POST, GET_POSTS_BY_CATEGORY, GET_MENUS, GET_TAGS, GET_CATEGORIES, GET_POSTS, GET_SEARCH_POSTS}

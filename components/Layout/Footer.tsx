@@ -42,7 +42,7 @@ export default function Footer(){
                                         {
                                             item?.childItems?.nodes?.map((item: any) => {
                                                 return(
-                                                    <li className="text-[15px] font-medium pb-2" key={item?.id}><Link href={`${item?.label}`}>{item?.label}</Link></li>
+                                                    <li className="text-[15px] font-medium pb-2" key={item?.id}><Link href={`/pages${item?.path}`}>{item?.label}</Link></li>
                                                 )
                                             })
 

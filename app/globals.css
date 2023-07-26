@@ -51,3 +51,19 @@
 .font_roboto{
     font-family: "Roboto Thin", sans-serif;
 }
+.pages_content h1, h2{
+    font-size: 26px;
+    font-weight: 700;
+    padding: 20px 0px;
+}
+.pages_content h3, h4{
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px 0px;
+}
+
+.pages_content p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+}

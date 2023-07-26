@@ -1,5 +1,4 @@
 import {Metadata} from "next";
-import {useQuery} from "@tanstack/react-query";
 import {GET_POST} from "@/lib/cms/WordPress/Quries";
 import client from "@/lib/cms/WordPress/ApolloClient";
 import Breadcumb from "@/components/common/Breadcumb";

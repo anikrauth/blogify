@@ -75,7 +75,6 @@ export default function Header() {
     }
 
 
-    console.log(LogoData?.blogifySettings?.blogify_logo)
 
     return (
         <header className={`flex items-center bg-white dark:bg-dark_header_color shadow-md px-5 md:px-16 py-[10px] w-full`}>
