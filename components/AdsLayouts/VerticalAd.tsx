@@ -1,3 +1,4 @@
+'use client'
 export default function VerticalAd(props: any){
     const {classNames} = props;
     return(
