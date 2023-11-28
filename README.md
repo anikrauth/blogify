@@ -1,4 +1,4 @@
-## This is a Open Source [Headless WordPress Next.js Blogging Website](https://www.devbucket.co) by Anik Routh. Any one can use this code for learing purposes.
+## This is an Open Source [Headless WordPress Next.js Blogging Website](https://www.devbucket.co) by Anik Routh. Anyone can use this code and modify it.
 
 ## Getting Started
 
